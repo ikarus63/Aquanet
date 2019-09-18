@@ -77,7 +77,7 @@ public class WebViewActivity extends Activity {
     1: další stránka
      */
 
-    String defaultURL = "https://m.aquanet.cz/";
+    String defaultURL = "http://m.aquanet.cz/";
 
     public static void cancelWebView() {
         noNet();
@@ -189,7 +189,7 @@ public class WebViewActivity extends Activity {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 //Toast.makeText(WebViewActivity.this, "SHOULD OVERRIDE", Toast.LENGTH_LONG).show();
-                if ((url.startsWith("https://m.aquanet.cz/") || url.startsWith("https://www.aquanet.cz/")) && !isAttachment(url)) {
+                if ((url.startsWith("http://m.aquanet.cz/") || url.startsWith("https://m.aquanet.cz/") || url.startsWith("https://www.aquanet.cz/")) && !isAttachment(url)) {
                     lastUrl = url;
                     if (url.toLowerCase().trim().equals(defaultURL.toLowerCase().trim())) {
                         //je to výchozí stránka
@@ -224,7 +224,7 @@ public class WebViewActivity extends Activity {
                 checkNetwork();
                 if (notifURL == 1) {
                     notifURL = 0;
-                    if ((url.startsWith("https://m.aquanet.cz") || url.startsWith("https://www.aquanet.cz")) && !isAttachment(url)) {
+                    if ((url.startsWith("http://m.aquanet.cz") || url.startsWith("https://m.aquanet.cz") || url.startsWith("https://www.aquanet.cz")) && !isAttachment(url)) {
                         lastUrl = url;
                     } else {
                         webView.loadUrl(defaultURL);

@@ -1,4 +1,4 @@
-package cz.pallasoftware.shout;
+package cz.pallasoftware.aquanet;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -28,8 +28,6 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -79,7 +77,7 @@ public class WebViewActivity extends Activity {
     1: další stránka
      */
 
-    String defaultURL = "https://www.shout.cz/mobile.aspx";
+    String defaultURL = "https://m.aquanet.cz/";
 
     public static void cancelWebView() {
         noNet();
@@ -119,7 +117,7 @@ public class WebViewActivity extends Activity {
         token = PreferenceManager.getDefaultSharedPreferences(this).getString("token", null);
         if (token == null) {
             if (dialog == null)
-                dialog = ProgressDialog.show(this, "SHOUT - Enterprise Social Network", "Initializing unique app ID...", true);
+                dialog = ProgressDialog.show(this, "AQUANET", "Initializing unique app ID...", true);
             initializeToken();
             //opakovat pokus po sekundě
             new Handler().postDelayed(new Runnable() {
@@ -191,7 +189,7 @@ public class WebViewActivity extends Activity {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 //Toast.makeText(WebViewActivity.this, "SHOULD OVERRIDE", Toast.LENGTH_LONG).show();
-                if ((url.startsWith("https://www.shout.cz") || url.startsWith("https://shout.cz")) && !isAttachment(url)) {
+                if ((url.startsWith("https://m.aquanet.cz/") || url.startsWith("https://www.aquanet.cz/")) && !isAttachment(url)) {
                     lastUrl = url;
                     if (url.toLowerCase().trim().equals(defaultURL.toLowerCase().trim())) {
                         //je to výchozí stránka
@@ -226,7 +224,7 @@ public class WebViewActivity extends Activity {
                 checkNetwork();
                 if (notifURL == 1) {
                     notifURL = 0;
-                    if ((url.startsWith("https://www.shout.cz") || url.startsWith("https://shout.cz")) && !isAttachment(url)) {
+                    if ((url.startsWith("https://m.aquanet.cz") || url.startsWith("https://www.aquanet.cz")) && !isAttachment(url)) {
                         lastUrl = url;
                     } else {
                         webView.loadUrl(defaultURL);

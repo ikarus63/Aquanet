@@ -1,4 +1,4 @@
-package cz.pallasoftware.shout;
+package cz.pallasoftware.aquanet;
 
 import org.junit.Test;
 

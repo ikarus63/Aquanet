@@ -1,39 +1,37 @@
 {
   "project_info": {
-    "project_number": "835184184728",
-    "firebase_url": "https://shout-2d896.firebaseio.com",
-    "project_id": "shout-2d896",
-    "storage_bucket": "shout-2d896.appspot.com"
+    "project_number": "554884245766",
+    "firebase_url": "https://aquanet-10f43.firebaseio.com",
+    "project_id": "aquanet-10f43",
+    "storage_bucket": "aquanet-10f43.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:835184184728:android:bacda5e5f9d91bd4",
+        "mobilesdk_app_id": "1:554884245766:android:b9ed149d443a612bdf1687",
         "android_client_info": {
-          "package_name": "cz.pallasoftware.shout"
+          "package_name": "cz.pallasoftware.aquanet"
         }
       },
       "oauth_client": [
         {
-          "client_id": "835184184728-i11t549rf12pfb3vj4rjsi2j2ikvcuq5.apps.googleusercontent.com",
+          "client_id": "554884245766-ju7rg34bmdqg1t0gt27rvoa2h8r5d7rf.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBcfiFLzsaHWh3DN75364i3stbDyR9SQ_g"
+          "current_key": "AIzaSyAdunl5H938kdWJYMjGlPiCB1XhwqhQjgA"
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
+          "other_platform_oauth_client": [
+            {
+              "client_id": "554884245766-ju7rg34bmdqg1t0gt27rvoa2h8r5d7rf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

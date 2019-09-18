@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="cz.pallasoftware.shout">
+    package="cz.pallasoftware.aquanet">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.VIBRATE"/>
@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="cz.pallasoftware.aquanet.MainActivity"
             android:exported="true"
             android:icon="@mipmap/ic_launcher" >
             <intent-filter>
@@ -24,11 +24,11 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".WebViewActivity"
+        <activity android:name="cz.pallasoftware.aquanet.WebViewActivity"
             android:exported="false" />
 
         <!--FireBase Cloud messaging -->
-        <service android:name=".MyFirebaseMessagingService">
+        <service android:name="cz.pallasoftware.aquanet.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>

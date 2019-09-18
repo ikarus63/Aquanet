@@ -1,4 +1,4 @@
-package cz.pallasoftware.shout;
+package cz.pallasoftware.aquanet;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
